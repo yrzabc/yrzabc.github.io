@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://yrzabc.github.io/favicon.ico?v=1650011107183">
+<link rel="shortcut icon" href="https://yrzabc.github.io/favicon.ico?v=1650015064029">
 <link rel="stylesheet" href="https://yrzabc.github.io/styles/main.css">
 
 
@@ -47,7 +47,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://yrzabc.github.io">
-        <img src="https://yrzabc.github.io/images/avatar.png?v=1650011107183" class="site-logo">
+        <img src="https://yrzabc.github.io/images/avatar.png?v=1650015064029" class="site-logo">
         <h1 class="site-title">小企鹅的家</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -131,12 +131,12 @@
 </ul>
 </blockquote>
 <h1 id="前言">前言</h1>
-<p>  <strong>大家一定觉得我是个标题党——</strong><br>
-  <strong>“这么多的功能，而且每一个功能看上去都很‘高大上’，你一个毛头小子，怎么可能做得到?用我一个朋友的话说，你要是能做到，我就倒立洗头!&quot;</strong>  😃😃<br>
+<p>   大家一定觉得我是个标题党——<br>
+  “这么多的功能，而且每一个功能看上去都很‘高大上’，你一个毛头小子，怎么可能做得到?用我一个朋友的话说，你要是能做到，我就倒立洗头!&quot;  😃😃<br>
  <br>
-  <strong>其实我之所以最终可以实现这么多功能，其实是因为我站在巨人的肩膀上。我们所碰到的各种问题其实别人也碰到过，只要我们耐心去网上找，就能找到解决办法。</strong><br>
+  其实我之所以最终可以实现这么多功能，是因为已经有大佬把工具都准备好了。我们所碰到的各种问题其实别人也碰到过，只要我们耐心去网上找，就能找到解决办法。<br>
  <br>
-  <strong>我虽然是个技术小白，但是当当搬运工，看看教程还是可以的。这篇文章就是我这段时间东搬西凑的成果，所有的步骤我都亲自走过，我会把一些常见的错误告诉大家，让大家少走弯路。</strong><br>
+  我虽然是个技术小白，但是当当搬运工，看看教程还是可以的。这篇文章就是我这段时间东搬西凑的成果，所有的步骤我都亲自走过，我会把一些常见的错误告诉大家，让大家少走弯路。<br>
  </p>
 <h1 id="准备工作">准备工作</h1>
 <p>1.前往<a href="https://www.zerotier.com/">Zerotier</a>官网下载并安装软件，所有计划连接的设备都需要安装;<br>
@@ -144,60 +144,49 @@
  </p>
 <h1 id="局域网连接">局域网连接</h1>
 <p>1.<strong>准备本地电脑访问</strong></p>
-<table>
-<thead>
-<tr>
-<th>MAC</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><br>1.打开mac自带的<strong>系统终端</strong>；</br> <br>2. <pre><br># 如果你的 Python 版本是 3.X</br> <br><strong>python -m http.server <your-port></strong> </br><br># 如果你的 Python 版本是 2.X </br><br><strong>python -m SimpleHTTPServer </strong><your-port></br><br># 如果你不清楚，可以两段代码都实验一下</br><img src="https://s2.loli.net/2022/04/15/k6MF7EbHsyzxNnD.png" /></pre></br></td>
-</tr>
-<tr>
-<td>Windows1</td>
-</tr>
-<tr>
-<td><br>1.下载工具；</br><br><a href="https://www.voidtools.com/zh-cn/"><strong>Everything: </strong></a>可以快速定位文件和文件夹，适合只需要进行访问的情形</br><br>2.配置工具，搭建共享网站；</br><br><li><strong>Everything</strong></li><ul><br>1.打开everything软件；</br><br>2.按下Ctrl + P快捷键调出设置页面，选择http服务器，勾选开启http服务器，设置访问端口，用户名和密码，勾选允许http下载，确认；</br></ul><img src="https://s2.loli.net/2022/04/15/EZQO3p7XS4uAaeJ.png" /></br></td>
-</tr>
-<tr>
-<td>Windows2</td>
-</tr>
-<tr>
-<td><br>1.下载工具；</br><br><a href="https://webd.cf/"><strong>webd: </strong></a>轻量局域网共享软件，适合需要对文件进行上传，删除的情形</br><br>2.配置工具，搭建共享网站；</br><br><li><strong>webd</strong></li><ul><br>1.打开webd配置文件( webd.conf )；</br><br>2.<pre><br># 修改共享文件夹位置；</br><br># for windows</br><br>Webd.Root &quot;<strong>C:\Users\yez\Downloads\share</strong>(加粗部分换成你自己想分享的文件路径)&quot;</br><br># 注意把.Trash移动到共享文件夹目录中，否则后续无法删除文件</br><br># user1 has all permissions.</br><br>Webd.User rlumS <strong>name</strong> <strong>password </strong>(加粗部分替换为自己需要的访问用户名和密码)</br><br># 可以根据官网文档自己设置其他访问用户，访问端口默认9212，也可以参考修改</br></pre></br></ul><br>3.双击tools.cmd运行</br></br></td>
-</tr>
-</tbody>
-</table>
+<center><strong>MAC</strong></center>
+<br>1.打开mac自带的<strong>系统终端</strong>；</br> <br>2.  
+<p>如果你的 Python 版本是 3.X</br> <code>python -m http.server &lt;your-port&gt;</code><br>如果你的 Python 版本是 2.X </br><code>python -m SimpleHTTPServer &lt;your-port&gt;</code><br>如果你不清楚，可以两段代码都实验一下</br><img src="https://s2.loli.net/2022/04/15/k6MF7EbHsyzxNnD.png" /></br></p>
+<center><strong>Windows1</strong></center>
+<br>1.下载工具；</br><a href="https://www.voidtools.com/zh-cn/"><strong>Everything: </strong></a>可以快速定位文件和文件夹，适合只需要进行访问的情形<br></br><br>2.配置工具，搭建共享网站；</br><li>打开everything软件；<br></li><li>按下Ctrl + P快捷键调出设置页面，选择http服务器，勾选开启http服务器，设置访问端口，用户名和密码，勾选允许http下载，确认；</br></li><img src="https://s2.loli.net/2022/04/15/EZQO3p7XS4uAaeJ.png" /></br>
+<center><strong>Windows2</strong></center>
+<br>1.下载工具；</br><a href="https://webd.cf/"><strong>webd: </strong></a>轻量局域网共享软件，适合需要对文件进行上传，删除的情形<br><br></br>2.配置工具，搭建共享网站；</br>
+<ul>
+<li>打开webd配置文件( webd.conf )；
+<ul>
+<li>修改共享文件夹位置；<br>
+<code># for windows</code><br>
+<code>Webd.Root &quot;你自己想分享的文件路径&quot;</code><br>
+<code># 注意把.Trash移动到共享文件夹目录中，否则后续无法删除文件</code></li>
+<li>修改访问权限<br>
+<code># user1 has all permissions.</code><br>
+<code>Webd.User rlumS name password</code></li>
+<li>可以根据官网文档自己设置其他访问用户，访问端口默认9212，也可以参考修改</li>
+</ul>
+</li>
+</ul>
+<p>3.双击tools.cmd运行</p>
 <blockquote>
 <p><strong>Tips:</strong><br>
 配置完成后可以在本地浏览器上输入http://<strong>您电脑的IP地址</strong>:<strong>端口号</strong>，倘若可以访问成功则配置完成；<br>
  </p>
 </blockquote>
 <h1 id="搭建虚拟局域网100mbps">搭建虚拟局域网(100Mbps)</h1>
-<ul>
-<li>前往<a href="https://www.zerotier.com/">Zerotier</a>官网注册账号；</li>
-<li>点击网站<strong>Network</strong>选项，选择<strong>创建新网络</strong>；<br>
-<img src="https://s2.loli.net/2022/04/15/p5OzBegHA3t78nC.png" alt="" loading="lazy"></li>
-<li>进入你创建的网络；
-<ul>
-<li>在<strong>Basics</strong> - <strong>Access Control</strong>中将访问权限改为<strong>public</strong>,</li>
-<li>在<strong>Advanced</strong> - <strong> IPv4 Auto-Assign</strong> 中选择一个你喜欢的网段，</li>
-<li>记下<strong>Basics</strong> - <strong>Network ID</strong>中的代码，这是你局域网的名字</li>
-</ul>
-</li>
-<li>在所有你想连接的设备上进入<strong>Zerotier</strong>，输入你的<strong>Network ID</strong>，点击加入；</li>
-<li>在网页端刷新，可以在<strong>members</strong>中看到你加入的设备，可以自定义备注，点击设置，勾选允许桥接；
-<ul>
-<li>可以在客户端查看到各个客户端的ip地址，对应网页就可以确认具体是哪一台设备<br>
-<img src="https://s2.loli.net/2022/04/15/tbEhD12MYSlZixB.png" alt="" loading="lazy"><br>
- </li>
-</ul>
-</li>
-</ul>
+<p>1.前往<a href="https://www.zerotier.com/">Zerotier</a>官网注册账号；<br>
+2.点击网站<strong>Network</strong>选项，选择<strong>创建新网络</strong>；<br>
+<img src="https://s2.loli.net/2022/04/15/p5OzBegHA3t78nC.png" alt="" loading="lazy"><br>
+3.进入你创建的网络；</p>
+<li>在<strong>Basics - Access Contro</strong>中将访问权限改为public,</li>
+<li>在<strong>Advanced -  IPv4 Auto-Assign</strong> 中选择一个你喜欢的网段，</li>
+<li>记下<strong>Basics - Network ID</strong>中的代码，这是你局域网的名字</li>
+&nbsp;
+<p>4.在所有你想连接的设备上进入<strong>Zerotier</strong>，输入你的<strong>Network ID</strong>，点击加入；<br>
+ <br>
+5.在网页端刷新，可以在<strong>members</strong>中看到你加入的设备，可以自定义备注，点击设置，勾选允许桥接;<li>可以在客户端查看到各个客户端的ip地址，对应网页就可以确认具体是哪一台设备</li></p>
+<figure data-type="image" tabindex="1"><img src="https://s2.loli.net/2022/04/15/tbEhD12MYSlZixB.png" alt="" loading="lazy"></figure>
 <h1 id="愉快跨设备访问">愉快跨设备访问</h1>
-<p>   <strong>倘若你完成了上述所有的步骤，那么此时你在任意一台设备的浏览器中输入以下网址</strong></p>
-<pre>http://<strong>客户端ip地址</strong>:<strong>客户端端口号</strong></pre>
-<p>  <strong>你就能异地跨设备访问啦！</strong></p>
+<p>   倘若你完成了上述所有的步骤，那么此时你在任意一台设备的浏览器中输入以下网址<br>
+http://客户端ip地址:客户端端口号，<strong>你就能异地跨设备访问啦！</strong></p>
 <blockquote>
 <p>Tips<br>
 客户端ip地址就是你在某台设备上开启Zerotier后自动分配的ip地址<br>
