@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>首页 | 小企鹅的家</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yrzabc.github.io/favicon.ico?v=1650011107183">
+<link rel="stylesheet" href="https://yrzabc.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+欢迎来到我的小站呀，很高兴遇见你！🤝
+
+🏠 关于本站
+大家好，这里是小企鹅之家——我业余开发的一个网站。网站主要用于分享生活日常，时事评论等，也会分享一些好的文章和教程。欢迎大家关注哦。😘
+👨‍💻 博主是谁
+00后，在校大学生，..." />
+    <meta name="keywords" content="个人" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yrzabc.github.io">
+        <img src="https://yrzabc.github.io/images/avatar.png?v=1650011107183" class="site-logo">
+        <h1 class="site-title">小企鹅的家</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      分享生活每一滴
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://yrzabc.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">首页</h2>
+            <div class="post-date">2022-03-09</div>
+            
+              <div class="feature-container" style="background-image: url('https://s2.loli.net/2022/04/14/tB6l8LIerpgkGFJ.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+<h2 id="关于本站">🏠 关于本站</h2>
+<p>大家好，这里是小企鹅之家——我业余开发的一个网站。网站主要用于分享生活日常，时事评论等，也会分享一些好的文章和教程。欢迎大家关注哦。😘</p>
+<h2 id="博主是谁">👨‍💻 博主是谁</h2>
+<p>00后，在校大学生，业余编程爱好者，期待与有趣的灵魂相遇💕</p>
+<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
+<p>羽毛球🏸 计算机🖥️ 读书📕 ......</p>
+<h2 id="联系我呀">📬 联系我呀</h2>
+<p>微信: yrzace123<br>
+QQ: 3379059453<br>
+邮箱: 3379059453@qq.com</p>
+<p>本站宣传小视频</p>
+<iframe src="//player.bilibili.com/player.html?bvid=BV1GU4y1Z7Vv&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yrzabc.github.io/tag/hs2XCRf9k/" class="tag">
+                    个人
+                  </a>
+                
+              </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'a10c4a4896a916ce11ec',
+        clientSecret: '8010c1d5ed801fd3c754eabdd4789b71dd116230',
+        repo: 'yrzabc.github.io',
+        owner: 'yrzabc',
+        admin: ['yrzabc'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
